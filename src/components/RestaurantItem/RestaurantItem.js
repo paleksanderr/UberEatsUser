@@ -1,30 +1,35 @@
-import { View, Text, StyleSheet, Image } from 'react-native'
-import React from 'react'
+import { View, Text, StyleSheet, Image } from "react-native";
+import React from "react";
 
-const RestaurantItem = ({name, description, image, price}) => {
-
- 
-
+const RestaurantItem = ({ restaurant }) => {
   return (
     <View style={styles.restaurantContainer}>
-      <Image
-        source={image}
-        style={styles.image}
-      />
-      <Text style={styles.title}>{name}</Text>
-      <Text style={styles.subTitle}>$1.99 20-40min</Text>
-      
+      <Image source={{ uri: restaurant.image }} style={styles.image} />
+      <View style={styles.row}>
+        <View>
+          <Text style={styles.title}>{restaurant.name}</Text>
+          <Text style={styles.subTitle}>
+            {" "}
+            {`$${restaurant.deliveryFee}`} &#8226;{" "}
+            {`${restaurant.minDeliveryTime}-${restaurant.maxDeliveryTime} minutes`}
+          </Text>
+        </View>
+        <View style={styles.rating}>
+            <Text style={styles.ratingText}>{restaurant.rating}</Text>
+        </View>
+      </View>
     </View>
   );
 };
 const styles = StyleSheet.create({
-
   image: {
     width: "100%",
     aspectRatio: 5 / 3,
     marginBottom: 5,
   },
-
+  row:{
+    flexDirection: "row",
+  },
   restaurantContainer: {
     width: "100%",
     marginVertical: 10,
@@ -40,8 +45,4 @@ const styles = StyleSheet.create({
   },
 });
 
-
 export default RestaurantItem;
-
-
-
