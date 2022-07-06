@@ -10,6 +10,11 @@ export default StyleSheet.create({
         width: Dimensions.get("screen").width,
         aspectRatio: 5 / 3,
     },
+    menuTitle: {
+       marginTop: 20,
+       fontSize: 18,
+       letterSpacing: 0.7,
+    },
     page: {
         flex: 1,
     },

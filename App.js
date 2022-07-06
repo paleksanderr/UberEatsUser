@@ -3,13 +3,15 @@ import { StyleSheet, View } from 'react-native';
 
 import HomeScreen from './src/screens/HomeScreen/HomeScreen'
 import RestaurantDetails from './src/screens/RestaurantDetails/RestaurantDetails'
+import DishDetailScreen from './src/screens/DishDetailScreen/DishDetailScreen'
 
 export default function App() {
   return (
     <View style={styles.container}>
       {/* <HomeScreen /> */}
-      <RestaurantDetails />
-      <StatusBar style="auto" />
+      {/* <RestaurantDetails /> */}
+      <DishDetailScreen />
+      <StatusBar style="light" />
     </View>
   );
 }
@@ -20,7 +22,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-  
-    paddingVertical: 30,
   }
 });

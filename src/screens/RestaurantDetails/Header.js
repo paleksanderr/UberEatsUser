@@ -2,18 +2,13 @@ import {
     View,
     Text,
     Image,
-    FlatList,
-    StyleSheet,
-    Dimensions,
 } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
 
-import restaurants from "../../../assets/data/restaurants.json";
+
 import styles from "./styles";
 
-const restaurant = restaurants[0];
 
-const Header = () => {
+const Header = ( { restaurant }) => {
     return (
         <View>
             <Image source={{ uri: restaurant.image }} style={styles.image} />
@@ -24,8 +19,10 @@ const Header = () => {
                     {" "}
                     {`$${restaurant.deliveryFee}`} &#8226;{" "}
                     {`${restaurant.rating}`}
-                    <Ionicons name="star" size={16} color="orange" />
+                    
                 </Text>
+
+                <Text style={styles.menuTitle}>Menu</Text>
             </View>
 
         </View>
