@@ -36,9 +36,8 @@ const styles = StyleSheet.create({
     },
     orderList: {
       flex: 1, 
-      backgroundColor: "red",
       width: Dimensions.get("window").width,
-
+      padding:20
     }
 });
 
