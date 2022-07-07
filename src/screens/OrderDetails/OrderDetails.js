@@ -4,7 +4,7 @@ import React from 'react'
 import orders from "../../../assets/data/orders.json";
 import restaurants from "../../../assets/data/restaurants.json";
 import styles from './styles'
-import OrderItem from '../../components/OrderItem/OrderItem'
+import BasketDishItem from "../../../src/components/BasketDishItem/BasketDishItem";
 
 const order = orders[0]
 
@@ -29,9 +29,11 @@ const OrderDetailsHeader = () => {
 const OrderDetails = () => {
   return (
       <FlatList
+          ListHeaderComponent={OrderDetailsHeader}
           data={restaurants[0].dishes}
-          renderItem={({ item }) => <OrderItem order={item} />}
+          renderItem={({ item }) => <BasketDishItem basketList={item} />}
       />
+      
   );
 }
 

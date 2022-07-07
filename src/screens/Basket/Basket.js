@@ -3,27 +3,12 @@ import { View, Text, StyleSheet, Dimensions, Button, FlatList } from "react-nati
 import { AntDesign } from "@expo/vector-icons";
 
 import restaurants from "../../../assets/data/restaurants.json";
+import BasketDishItem from "../../components/BasketDishItem/BasketDishItem";
 
 const restaurant = restaurants[0];
 
 
-const BasketDishItem = ({basketList}) => {
-  return (
-      <View>
-          <View style={styles.row}>
-              <View style={styles.quantityItem}>
-                  <Text>1</Text>
-              </View>
-              <View style={styles.nameContainer}>
-                  <Text style={styles.name}>{basketList.name}</Text>
-              </View>
-              <View style={styles.priceContainer}>
-                  <Text>${basketList.price}</Text>
-              </View>
-          </View>
-      </View>
-  );
-}
+
 const Basket = () => {
     return (
         <View style={styles.page}>

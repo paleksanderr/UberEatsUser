@@ -22,29 +22,31 @@ const OrderItem = ({ order }) => {
 };
 const styles = StyleSheet.create({
     container: {
-        flexDirection: "row",
-        alignItems: "center",
+        flexDirection: 'row',
+        alineItems:'center'
     },
-    imageContainer: {},
-    contentContainer: {
-        marginLeft: 10,
+    imageContainer: {
+
+    },
+    contentContainer:{
+        marginLeft:10,
     },
     image: {
-        width: 75,
+        width:75,
         height: 75,
     },
     separator: {
-        height: 1,
-        backgroundColor: "lightgray",
-        marginVertical: 10,
-    },
-    titleText: {
-        fontSize: 15,
-        fontWeight: "600",
-        marginBottom: 5,
-    },
-    text1: {
-        color: "lightgrey",
-    },
+    height: 1,
+    backgroundColor: 'lightgray',
+    marginVertical: 10,
+  },
+  titleText:{
+    fontSize: 15,
+    fontWeight:'600',
+    marginBottom:5,
+  },
+  text1:{
+    color: 'lightgrey'
+  },
 });
 export default OrderItem;
