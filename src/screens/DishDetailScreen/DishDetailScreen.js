@@ -16,7 +16,9 @@ const DishDetailScreen = () => {
   const onMinus = () => {
     quantity > 1 && setQuantity(quantity - 1);
   }
-  
+  const getTotal = () => {
+    return (quantity * dish.price).toFixed(2);
+  }
 
   return (
       <View style={styles.page}>
@@ -28,6 +30,10 @@ const DishDetailScreen = () => {
               <Text style={styles.quantity}>{quantity}</Text>
               <AntDesign name="minuscircleo" size={60} onPress={onMinus} />
           </View>
+          <View style={styles.button}>
+              <Text style={styles.buttonText}>Add {quantity} to the basket &#8226; ${getTotal()}</Text>
+          </View>
+          
       </View>
   );
 }
@@ -37,7 +43,20 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    top: Dimensions.get('window').height * 0.1,
+    top:10,
+  },
+  button: {
+    marginTop: 'auto',
+    backgroundColor:'black',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 20,
+    
+  },
+  buttonText: {
+    color: 'white',
+    fontWeight: '600',
+    fontSize: 18,
   },
   description: {
     color: 'grey'

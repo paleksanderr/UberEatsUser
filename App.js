@@ -4,23 +4,27 @@ import { StyleSheet, View } from 'react-native';
 import HomeScreen from './src/screens/HomeScreen/HomeScreen'
 import RestaurantDetails from './src/screens/RestaurantDetails/RestaurantDetails'
 import DishDetailScreen from './src/screens/DishDetailScreen/DishDetailScreen'
-
+import Basket from './src/screens/Basket/Basket'
+import OrdersScreen from './src/screens/OrdersScreen/OrdersScreen'
 export default function App() {
   return (
     <View style={styles.container}>
       {/* <HomeScreen /> */}
       {/* <RestaurantDetails /> */}
-      <DishDetailScreen />
+      {/* <DishDetailScreen /> */}
+      {/* <Basket /> */}
+      <OrdersScreen />
       <StatusBar style="light" />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  }
+    container: {
+        flex: 1,
+        backgroundColor: "#fff",
+        alignItems: "center",
+        justifyContent: "center",
+
+    },
 });
