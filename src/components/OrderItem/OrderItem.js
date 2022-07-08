@@ -1,24 +1,28 @@
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, Pressable } from "react-native";
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 
 const OrderItem = ({ order }) => {
+    const navigation = useNavigation();
     return (
-        
-        <View>
-            
-        <View style={styles.container1}>
-            <View style={styles.imageContainer}>
-                <Image source={{uri: order.Restaurant.image }} style={styles.image} />
+        <Pressable onPress={() => navigation.navigate("OrderDetails")}>
+            <View style={styles.container1}>
+                <View style={styles.imageContainer}>
+                    <Image
+                        source={{ uri: order.Restaurant.image }}
+                        style={styles.image}
+                    />
+                </View>
+                <View style={styles.contentContainer}>
+                    <Text style={styles.titleText}>
+                        {order.Restaurant.name}
+                    </Text>
+                    <Text style={styles.text1}>3 items &#8226; $38.45</Text>
+                    <Text style={styles.text1}>OrderItem &#8226; NEW</Text>
+                </View>
             </View>
-            <View style={styles.contentContainer}>
-                <Text style={styles.titleText}>{order.Restaurant.name}</Text>
-                <Text style={styles.text1}>3 items &#8226; $38.45</Text>
-                <Text style={styles.text1}>OrderItem &#8226; NEW</Text>
-            </View>
-        </View>
-        <View style={styles.separator}></View>
-        </View>
-        
+            <View style={styles.separator}></View>
+        </Pressable>
     );
 };
 const styles = StyleSheet.create({

@@ -9,7 +9,7 @@ import orders from "../../../assets/data/orders.json";
 
 const OrdersScreen = () => {
     return (
-        <View style={styles.try}>
+        <View style={styles.containerMain}>
             <View style={styles.title}>
                 <Text style={styles.titleText}>Your Orders</Text>
             </View>
@@ -33,10 +33,13 @@ const styles = StyleSheet.create({
     titleText: {
         fontSize: 25,
         fontWeight: "600",
-        color:'red'
-    },
-    try: {
         
+    },
+    containerMain: {
+          flex: 1,
+        backgroundColor: "#fff",
+        alignItems: "center",
+        justifyContent: "center",
     },
     orderList: {
       flex: 1, 
