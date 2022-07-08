@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
     titleText: {
         fontSize: 25,
         fontWeight: "600",
+        color:'red'
     },
     try: {
         
@@ -40,7 +41,8 @@ const styles = StyleSheet.create({
     orderList: {
       flex: 1, 
       width: Dimensions.get("window").width,
-      padding:20
+      padding:20,
+    
     }
 });
 

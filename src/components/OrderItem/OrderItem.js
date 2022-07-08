@@ -5,7 +5,8 @@ const OrderItem = ({ order }) => {
     return (
         
         <View>
-        <View style={styles.container}>
+            
+        <View style={styles.container1}>
             <View style={styles.imageContainer}>
                 <Image source={{uri: order.Restaurant.image }} style={styles.image} />
             </View>
@@ -21,12 +22,19 @@ const OrderItem = ({ order }) => {
     );
 };
 const styles = StyleSheet.create({
-    container: {
+        container: {
+        flex: 1,
+        backgroundColor: "#fff",
+        alignItems: "center",
+        justifyContent: "center",
+
+    },
+    container1: {
         flexDirection: 'row',
         alineItems:'center'
     },
     imageContainer: {
-
+        
     },
     contentContainer:{
         marginLeft:10,
