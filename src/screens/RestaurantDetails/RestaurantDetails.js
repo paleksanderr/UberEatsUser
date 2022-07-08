@@ -8,6 +8,7 @@ import {
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
+
 import restaurants from "../../../assets/data/restaurants.json";
 import MenuItem from "../../components/MenuItem/MenuItem";
 import Header from './Header'
