@@ -48,7 +48,8 @@ const styles = StyleSheet.create({
   },
   restaurantContainer: {
     width: "100%",
-    marginVertical: 10,
+    marginVertical: 5,
+    padding:10,
   },
   title: {
     fontSize: 15,

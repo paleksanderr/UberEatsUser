@@ -17,6 +17,7 @@ export default StyleSheet.create({
     },
     page: {
         flex: 1,
+        
     },
     title: {
         fontSize: 35,
