@@ -8,6 +8,7 @@ import DishDetailScreen from "../screens/DishDetailScreen/DishDetailScreen";
 import Basket from "../screens/Basket/Basket";
 import OrdersScreen from "../screens/OrdersScreen/OrdersScreen";
 import OrderDetails from "../screens/OrderDetails/OrderDetails";
+import Profile from "../screens/Profile/index";
 
 const Stack = createNativeStackNavigator();
 
@@ -43,7 +44,7 @@ const HomeTab = () => {
             />
             <Tab.Screen
                 name="Profile"
-                component={RestaurantDetails}
+                component={Profile}
                 options={{
                     tabBarIcon: ({ color }) => (
                         <AntDesign name="user" size={24} color={color} />
